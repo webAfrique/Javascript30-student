@@ -24,6 +24,10 @@ span.drum{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.95), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
     /*animation-name: playing;*/
 }
+.anim{
+    animation-name: playing;
+    animation-duration: 0.2s;
+}
 @keyframes playing{
     0% {
         padding: 5px;
