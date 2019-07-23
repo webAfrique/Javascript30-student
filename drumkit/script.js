@@ -1,14 +1,20 @@
-function fn(){
-    document.getElementById('sound1').play();
-}
-//setTimeout(fn, 1000);
-onkeydown = function(event){
-    
+const drums = Array.from(document.querySelectorAll('.drum'));
+function playSound(event){
     let key = event.key;
-    document.querySelector(`audio[data-key=${key}]`).play();
-    document.querySelector(`span[data-key=${key}]`).style.animationName = 'playing';
-    document.querySelector(`span[data-key=${key}]`).style.animationDuration = '0.2s';
+    let audio = document.querySelector(`audio[data-key=${key}]`);
+    let drum = document.querySelector(`span[data-key=${key}]`);
+    drum.classList.add('anim');
+    audio.currentTime = 0;
+    audio.play();
+    
+    
 }
+function removeAnim(){
+    this.classList.remove('anim');
+}
+window.addEventListener('keydown', playSound);
+drums.forEach(drum => drum.addEventListener('animationend', removeAnim));
+drums
 
 
 
