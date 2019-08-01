@@ -1,0 +1,32 @@
+#clock-face{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border: 5px solid black;
+    border-radius: 100%; /*for an alternative round clock face*/
+    margin: 50px auto 0;
+}
+.hand{
+    width: 75px;
+    height: 5px;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+    transform-origin: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.hour-hand{
+    transform: rotate(45deg);
+    background: skyblue;
+    z-index: 10;
+}
+.min-hand{
+    transform: rotate(120deg);
+    background: greenyellow;
+    z-index: 20;
+}
+.sec-hand{
+    background: red;
+    z-index: 30;
+}
